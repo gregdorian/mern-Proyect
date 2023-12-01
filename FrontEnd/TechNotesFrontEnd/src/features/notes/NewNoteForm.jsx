@@ -39,7 +39,6 @@ const NewNoteForm = ({ users }) => {
         if (canSave) {
             await addNewNote({ user: userId, title, text })
         }
-
     }
 
     const options = users.map(user => {

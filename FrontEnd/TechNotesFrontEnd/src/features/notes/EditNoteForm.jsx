@@ -43,7 +43,7 @@ const EditNoteForm = ({ note, users }) => {
     const onUserIdChanged = e => setUserId(e.target.value)
 
     const canSave = [title, text, userId].every(Boolean) && !isLoading
-
+    console.log(userId)
     const onSaveNoteClicked = async (e) => {
         if (canSave) {
             await updateNote({ id: note.id, user: userId, title, text, completed })
